@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PDFProgressData } from "pdfjs-dist";
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-pdf-view',
@@ -25,6 +25,10 @@ export class PdfViewComponent implements OnInit {
         this.renderArrayPaginate.push(i);
       }
     });
-    console.log($event);
+    // console.log($event);
+  }
+
+  savePDF() {
+    saveAs("assets/cv.pdf", "cv.pdf");
   }
 }
