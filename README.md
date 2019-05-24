@@ -5,3 +5,5 @@
 ##### Step 3: run ng build --prod
 
 ##### Step 4: copy all file in dist project to your github page repository
+##### Example:
+https://andy3520.github.io/
