@@ -1,0 +1,20 @@
+<pdf-viewer [src]="pdfSrc"
+            [render-text]="true"
+            [(page)]="pageVariable"
+            [render-text-mode]="2"
+            [show-all]="false"
+            [fit-to-page]="true"
+            (after-load-complete)="callBackFn($event)"
+            style="display: block;">
+</pdf-viewer>
+<div class="d-flex justify-content-center">
+  <nav aria-label="Page navigation example" *ngIf="totalPage > 1 && renderArrayPaginate?.length > 0">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#" (click)="pageVariable = pageVariable > 1 ? pageVariable - 1 : 1">Previous</a></li>
+      <ng-container *ngFor="let i of renderArrayPaginate">
+        <li class="page-item"><a class="page-link" href="#" (click)="pageVariable = i"> {{ i }} </a></li>
+      </ng-container>
+      <li class="page-item"><a class="page-link" href="#" (click)="pageVariable = pageVariable < totalPage ? pageVariable + 1 : totalPage">Next</a></li>
+    </ul>
+  </nav>
+</div>
