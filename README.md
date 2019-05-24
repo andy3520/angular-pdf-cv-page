@@ -1,6 +1,6 @@
 ##### Step 1: cd to cv-angular and run npm i 
 
-##### Step 2: replace cv.pdf in cv-angular/src/assets
+##### Step 2: replace cv.pdf in cv-angular/src/assets (do not change file name)
 
 ##### Step 3: run ng build --prod
 
